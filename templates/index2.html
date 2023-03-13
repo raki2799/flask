@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Football</title>
+        <link rel = "stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    </head>
+    <body>
+        <img src = "https://media.gettyimages.com/id/984908994/photo/argentina-portraits-2018-fifa-world-cup-russia.jpg?s=612x612&w=gi&k=20&c=5xZGu0es_HcWX6St6iCF-UJ-M9AQWhrg69MmNvmaxA0=">
+        <br>
+        <form action = "greet" method = "post">
+        {% for message in get_flashed_messages()%}
+            <p> {{message}} </p>
+        {% endfor %}
+        <br>
+        <input type = "text" name = "name_input">
+        <br>
+        <input type = "submit" value = "Submit" id = "greet">
+            
+     </form>
+    </body>
+</html>
